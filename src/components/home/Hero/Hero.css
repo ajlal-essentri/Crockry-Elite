@@ -123,65 +123,33 @@ border-radius: 5px;
     color:#6B7280;
 }
 
-.hero-right{
-    position:relative;
+.hero-trust-row{
+    display:flex;
+    gap:35px;
+    margin-top:45px;
+    padding-top:35px;
+    border-top:1px solid #E5E7EB;
 }
 
-.hero-trust-badges{
+.trust-item{
     display:flex;
     align-items:center;
-    gap:24px;
-    margin-top:35px;
-    padding-top:28px;
-    border-top:1px solid #E7E1D3;
+    gap:10px;
 }
 
-.trust-badge{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.trust-icon{
-    width:42px;
-    height:42px;
-    flex-shrink:0;
-    border-radius:50%;
-    background:#FFF8E7;
+.trust-item svg{
     color:#C8A96A;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:.3s;
+    flex-shrink:0;
 }
 
-.trust-badge:hover .trust-icon{
-    background:#C8A96A;
-    color:#fff;
-    transform:translateY(-3px);
-}
-
-.trust-badge span{
+.trust-item p{
     font-size:14px;
     font-weight:600;
-    color:#1F2937;
-    white-space:nowrap;
+    color:#374151;
 }
 
-.trust-divider{
-    width:1px;
-    height:34px;
-    background:#E0D6BC;
-}
-
-@media (max-width:768px){
-    .hero-trust-badges{
-        flex-wrap:wrap;
-        gap:18px;
-    }
-    .trust-divider{
-        display:none;
-    }
+.hero-right{
+    position:relative;
 }
 
 .hero-right::before{
@@ -196,4 +164,66 @@ border-radius: 5px;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+}
+@media (max-width: 992px){
+    .hero{
+        min-height:auto;
+        padding:60px 0;
+    }
+
+    .hero .container{
+        flex-direction:column-reverse;
+        gap:40px;
+        text-align:center;
+    }
+
+    .hero-left h1{
+        font-size:40px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero-stats{
+        justify-content:center;
+        flex-wrap:wrap;
+        margin-top:35px;
+    }
+
+    .hero-trust-row{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .hero-right img{
+        max-width:340px;
+    }
+}
+
+@media (max-width: 480px){
+    .hero-left h1{
+        font-size:30px;
+    }
+
+    .hero-left p{
+        font-size:15px;
+    }
+
+    .shop-btn,
+    .explore-btn{
+        padding:12px 22px;
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .hero-buttons button{
+        width:100%;
+    }
 }

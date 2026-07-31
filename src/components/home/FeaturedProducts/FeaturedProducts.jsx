@@ -27,7 +27,6 @@ function FeaturedProducts() {
 
               <div className="product-info">
                 <h3>{product.name}</h3>
-                <div className="product-rating">{"⭐".repeat(product.rating || 5)}</div>
                 <p>Rs {product.price}</p>
 
                 <button

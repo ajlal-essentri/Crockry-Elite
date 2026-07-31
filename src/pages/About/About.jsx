@@ -15,12 +15,9 @@ import {
     Search,
     PackageCheck,
     Truck,
-    Quote,
-    Star,
     Plus,
     Minus,
-    ArrowRight,
-    Users,
+    ArrowRight
 } from "lucide-react";
 import aboutImg from "../../assets/images/about/about.jpg";
 
@@ -117,26 +114,18 @@ function About() {
                         <div className="about-boxes">
 
                             <div className="box">
-                                <div className="box-icon">
-                                    <Users size={26} strokeWidth={1.8} />
-                                </div>
-                                <h2>5000+</h2>
+                                <h2>10+</h2>
+                                <p>Years Of Trust</p>
+                            </div>
+
+                            <div className="box">
+                                <h2>1000+</h2>
                                 <p>Happy Customers</p>
                             </div>
 
                             <div className="box">
-                                <div className="box-icon">
-                                    <Award size={26} strokeWidth={1.8} />
-                                </div>
-                                <h2>5+</h2>
-                                <p>Years Experience</p>
-                            </div>
-
-                            <div className="box">
-                                <div className="box-icon">
-                                    <Gem size={26} strokeWidth={1.8} />
-                                </div>
-                                <p className="quality-label">Handpicked Quality</p>
+                                <Gem size={28} strokeWidth={1.8} />
+                                <p>Handpicked Quality</p>
                             </div>
 
                         </div>
@@ -388,178 +377,13 @@ function About() {
             </section>
 
 
-            {/* Achievements */}
+            {/* Achievements section removed — real numbers will be added here
+                once the store has genuine order/customer history */}
 
 
 
-            <section className="stats-section">
-
-                <div className="container">
-
-                    <div className="stats-heading">
-
-                        <span>OUR ACHIEVEMENTS</span>
-
-                        <h2>Trusted By Thousands</h2>
-
-                        <p>
-                            Our commitment to quality and customer satisfaction has helped us
-                            become a trusted destination for premium crockery.
-                        </p>
-
-                    </div>
-
-                    <div className="stats-grid">
-
-                        <div className="stat-card">
-                            <h2>10+</h2>
-                            <h4>Years Experience</h4>
-                        </div>
-
-                        <div className="stat-card">
-                            <h2>25K+</h2>
-                            <h4>Happy Customers</h4>
-                        </div>
-
-                        <div className="stat-card">
-                            <h2>500+</h2>
-                            <h4>Premium Products</h4>
-                        </div>
-
-                        <div className="stat-card">
-                            <h2>99%</h2>
-                            <h4>Customer Satisfaction</h4>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-
-            {/* Testimonials */}
-
-            <section className="testimonial-section">
-
-                <div className="testimonial-heading">
-
-                    <span>TESTIMONIALS</span>
-
-                    <h2>What Our Customers Say</h2>
-
-                    <p>
-                        Hear from customers who trust us for premium crockery, elegant
-                        designs, and exceptional quality.
-                    </p>
-
-                </div>
-
-                <div className="testimonial-grid">
-
-                    <div className="testimonial-card">
-
-                        <Quote className="quote-icon" size={34} />
-
-                        <p>
-                            The dinner set exceeded my expectations. The quality,
-                            packaging, and overall experience felt truly premium.
-                        </p>
-
-                        <div className="stars">
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                        </div>
-
-                        <div className="customer">
-
-                            <img
-                                src="https://i.pravatar.cc/100?img=12"
-                                alt="Customer"
-                            />
-
-                            <div>
-                                <h4>Ahmed Khan</h4>
-                                <span>Lahore</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div className="testimonial-card">
-
-                        <Quote className="quote-icon" size={34} />
-
-                        <p>
-                            Beautiful craftsmanship with fast delivery. Every piece
-                            perfectly matched the photos on the website.
-                        </p>
-
-                        <div className="stars">
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                        </div>
-
-                        <div className="customer">
-
-                            <img
-                                src="https://i.pravatar.cc/100?img=32"
-                                alt="Customer"
-                            />
-
-                            <div>
-                                <h4>Sarah Ali</h4>
-                                <span>Karachi</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div className="testimonial-card">
-
-                        <Quote className="quote-icon" size={34} />
-
-                        <p>
-                            Their customer service was outstanding. I will definitely
-                            purchase again and recommend them to friends.
-                        </p>
-
-                        <div className="stars">
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                            <Star fill="#D4AF37" size={18} />
-                        </div>
-
-                        <div className="customer">
-
-                            <img
-                                src="https://i.pravatar.cc/100?img=45"
-                                alt="Customer"
-                            />
-
-                            <div>
-                                <h4>Hamza Malik</h4>
-                                <span>Islamabad</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
+            {/* Testimonials section removed — will add real customer reviews
+                here once genuine orders start coming in */}
 
 
 

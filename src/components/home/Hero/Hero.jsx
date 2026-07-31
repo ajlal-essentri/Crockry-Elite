@@ -1,7 +1,10 @@
 import "./Hero.css";
 import heroImg from "../../../assets/images/hero/hero.png";
-import { ShieldCheck, Truck, RotateCcw } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Truck, ShieldCheck, RotateCcw } from "lucide-react";
+
 function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="hero">
       <div className="container">
@@ -20,53 +23,38 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="shop-btn">Shop Now</button>
-            <button className="explore-btn">Explore Collection</button>
+            <button className="shop-btn" onClick={() => navigate("/shop")}>Shop Now</button>
+            <button className="explore-btn" onClick={() => navigate("/categories")}>Explore Collection</button>
           </div>
           <div className="hero-stats">
 
   <div className="stat">
-    <h3>5000+</h3>
+    <h3>10+</h3>
+    <p>Years Of Trust</p>
+  </div>
+
+  <div className="stat">
+    <h3>1000+</h3>
     <p>Happy Customers</p>
-  </div>
-
-  <div className="stat">
-    <h3>1200+</h3>
-    <p>Products</p>
-  </div>
-
-  <div className="stat">
-    <h3>4.9★</h3>
-    <p>Customer Rating</p>
   </div>
 
 </div>
 
-<div className="hero-trust-badges">
+          <div className="hero-trust-row">
 
-  <div className="trust-badge">
-    <div className="trust-icon">
-      <ShieldCheck size={22} strokeWidth={1.8} />
-    </div>
-    <span>Premium Quality</span>
+  <div className="trust-item">
+    <ShieldCheck size={22} />
+    <p>Premium Quality</p>
   </div>
 
-  <div className="trust-divider"></div>
-
-  <div className="trust-badge">
-    <div className="trust-icon">
-      <Truck size={22} strokeWidth={1.8} />
-    </div>
-    <span>Fast Delivery</span>
+  <div className="trust-item">
+    <Truck size={22} />
+    <p>Fast Delivery</p>
   </div>
 
-  <div className="trust-divider"></div>
-
-  <div className="trust-badge">
-    <div className="trust-icon">
-      <RotateCcw size={22} strokeWidth={1.8} />
-    </div>
-    <span>Easy Exchange</span>
+  <div className="trust-item">
+    <RotateCcw size={22} />
+    <p>Easy Exchange</p>
   </div>
 
 </div>

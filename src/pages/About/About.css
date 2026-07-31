@@ -42,57 +42,29 @@
 }
 
 .box{
-    background:#fff;
-    padding:35px 30px;
+    background:#F8F9FA;
+    padding:25px;
     text-align:center;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.35s;
+    border-radius:15px;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
 }
 
 .box:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
 
-.box-icon{
-    width:70px;
-    height:70px;
-    margin:0 auto 20px;
-    border-radius:50%;
-    background:#F8F9FA;
+.box svg{
     color:#D4AF37;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:.35s;
-}
-
-.box:hover .box-icon{
-    background:#D4AF37;
-    color:#fff;
-}
-
-.box h2{
-    color:#D4AF37;
-    font-size:32px;
-    margin-bottom:8px;
-    font-weight:700;
-    letter-spacing:.5px;
 }
 
 .box p{
-    color:#555;
     font-size:14px;
     font-weight:600;
-    letter-spacing:.3px;
-    margin-bottom:0;
-}
-
-.quality-label{
-    font-size:18px !important;
-    color:#D4AF37 !important;
-    font-weight:700 !important;
-    margin-top:8px;
+    color:#1F2937;
 }
 
 /* Mission & Vision */

@@ -1,6 +1,6 @@
 import "./Shop.css";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, Link } from "react-router-dom";
 import Filters from "../../components/shop/Filters/Filters";
 import ProductGrid from "../../components/shop/ProductGrid/ProductGrid";
 
@@ -29,10 +29,15 @@ function Shop() {
         <>
             <section className="shop-banner">
                 <div className="container">
-                    <span className="eyebrow">PREMIUM CROCKERY COLLECTION</span>
-                    <h1>Shop</h1>
-                    <div className="gold-underline"></div>
-                    <p>Home / <span className="current">Shop</span></p>
+                    <span className="shop-banner-eyebrow">OUR COLLECTION</span>
+                    <h1>Shop All Crockery</h1>
+                    <p className="shop-banner-desc">
+                        Browse our full range of premium dinner sets, cups, plates,
+                        bowls and tableware — handpicked for every home.
+                    </p>
+                    <p className="breadcrumb">
+                        <Link to="/">Home</Link> / <span>Shop</span>
+                    </p>
                 </div>
             </section>
 

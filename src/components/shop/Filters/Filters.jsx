@@ -1,16 +1,7 @@
 import "./Filters.css";
+import categories from "../../../data/categories";
 
-const categoryList = [
-  "Dinner Sets",
-  "Plates",
-  "Bowls",
-  "Cups & Mugs",
-  "Glassware",
-  "Water Bottles",
-  "Knives",
-  "Non-Stick & Fry Pans",
-  "Kitchen Accessories",
-];
+const categoryList = categories.map((c) => c.name);
 
 function Filters({ selectedCategories = [], onToggleCategory, onClear }) {
   return (
@@ -21,14 +12,14 @@ function Filters({ selectedCategories = [], onToggleCategory, onClear }) {
       <div className="filter-box">
         <h3>Categories</h3>
 
-        {categoryList.map((category) => (
-          <label key={category}>
+        {categoryList.map((cat) => (
+          <label key={cat}>
             <input
               type="checkbox"
-              checked={selectedCategories.includes(category)}
-              onChange={() => onToggleCategory && onToggleCategory(category)}
+              checked={selectedCategories.includes(cat)}
+              onChange={() => onToggleCategory(cat)}
             />
-            {category}
+            {" "}{cat}
           </label>
         ))}
       </div>
