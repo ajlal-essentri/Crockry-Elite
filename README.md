@@ -1,4 +1,4 @@
-# Crockery Elite 🏺
+# Crockery Elite 
 
 A full-stack e-commerce web application for a premium crockery and tableware store — built with React, Vite, and Supabase.
 
