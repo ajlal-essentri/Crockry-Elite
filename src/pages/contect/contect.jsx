@@ -63,7 +63,7 @@ function Contact() {
               <MapPin size={24}/>
               <div>
                 <h3>Address</h3>
-                <p>Clifton, Delhi Colony, Shamim Mosque</p>
+                <p>Pakistan, Karachi, Clifton, Delhi Colony, Shamim Mosque</p>
               </div>
             </div>
 
@@ -71,7 +71,7 @@ function Contact() {
               <Phone size={24}/>
               <div>
                 <h3>Phone</h3>
-                <p>+92 300 1234567</p>
+                <p>+92 312 2130303</p>
               </div>
             </div>
 
@@ -87,7 +87,7 @@ function Contact() {
               <Clock size={24}/>
               <div>
                 <h3>Working Hours</h3>
-                <p>Mon - Sat : 9:00 AM - 8:00 PM</p>
+                <p>Mon - Sat : 11:00 AM - 10:00 PM</p>
               </div>
             </div>
 
