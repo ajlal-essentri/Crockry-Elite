@@ -63,7 +63,8 @@ function Contact() {
               <MapPin size={24}/>
               <div>
                 <h3>Address</h3>
-                <p>Pakistan, Karachi, Clifton, Delhi Colony, Shamim Mosque</p>
+                <p><h3>Address</h3>
+<p>Near Shamim Mosque, Delhi Colony, Clifton, Karachi, Pakistan</p></p>
               </div>
             </div>
 

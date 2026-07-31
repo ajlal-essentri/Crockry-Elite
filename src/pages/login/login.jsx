@@ -21,7 +21,7 @@ function Login() {
       await loginCustomer(email, password);
       navigate("/");
     } catch (err) {
-      setError("Email ya password ghalat hai.");
+      setError("Invalid email or password..");
     } finally {
       setLoading(false);
     }
