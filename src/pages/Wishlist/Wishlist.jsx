@@ -15,7 +15,8 @@ function Wishlist() {
           <span>YOUR FAVORITES</span>
           <h1>Wishlist</h1>
           {wishlistItems.length === 0 && (
-            <p>Wishlist khali hai. Products ke upar dil (heart) icon dabao unhein yahan save karne ke liye.</p>
+            <p>Your wishlist is empty.
+Save your favorite products here so you can find them easily later.</p>
           )}
         </div>
 
