@@ -140,6 +140,7 @@ border-radius: 5px;
 .trust-item svg{
     color:#C8A96A;
     flex-shrink:0;
+    margin-bottom: 30px;
 }
 
 .trust-item p{
@@ -196,6 +197,9 @@ border-radius: 5px;
         justify-content:center;
         flex-wrap:wrap;
         gap:20px;
+    }
+    .forIcon{
+        margin-bottom: 1px;
     }
 
     .hero-right img{

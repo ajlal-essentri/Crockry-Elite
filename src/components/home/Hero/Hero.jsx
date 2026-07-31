@@ -43,7 +43,7 @@ function Hero() {
           <div className="hero-trust-row">
 
   <div className="trust-item">
-    <ShieldCheck size={22} />
+    <ShieldCheck size={25} />
     <p>Premium Quality</p>
   </div>
 
