@@ -62,6 +62,7 @@ function Shop() {
                                 <option value="newest">Newest</option>
                                 <option value="price-low-high">Price: Low to High</option>
                                 <option value="price-high-low">Price: High to Low</option>
+                                <option value="Best Selling">Best Selling</option>
                             </select>
                         </div>
                         <ProductGrid selectedCategories={selectedCategories} sortOption={sortOption} />

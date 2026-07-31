@@ -36,12 +36,12 @@ function ProductGrid({ selectedCategories = [], sortOption = "newest" }) {
                     placeholder="Search products..."
                 />
 
-                <select>
+                {/* <select>
                     <option>Newest</option>
                     <option>Price: Low to High</option>
                     <option>Price: High to Low</option>
                     <option>Best Selling</option>
-                </select>
+                </select> */}
             </div>
             <div className="products-grid">
                 {filteredProducts.map((product) => (

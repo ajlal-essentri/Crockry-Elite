@@ -95,6 +95,8 @@
     font-size: 14px;
     background: #fff;
     cursor: pointer;
+    width: 225px;
+    text-align: center;
 }
 
 @media (max-width: 900px){
