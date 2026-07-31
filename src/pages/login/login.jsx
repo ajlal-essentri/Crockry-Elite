@@ -21,7 +21,7 @@ function Login() {
       await loginCustomer(email, password);
       navigate("/");
     } catch (err) {
-      setError("Invalid email or password..");
+      setError("Invalid email or password...");
     } finally {
       setLoading(false);
     }
@@ -32,7 +32,7 @@ function Login() {
       <form className="login-box" onSubmit={handleSubmit}>
 
         <h1>Welcome Back</h1>
-        <p>Login to your account</p>
+        <p className="loginText">Login to your account</p>
 
         <input
           type="email"

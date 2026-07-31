@@ -21,7 +21,12 @@
 }
 
 .login-box p{
-    color:#6B7280;
+    color:red;
+    margin-bottom:30px;
+}
+
+.loginText{
+    color:#6B7280 !important;
     margin-bottom:30px;
 }
 
