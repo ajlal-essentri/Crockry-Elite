@@ -192,7 +192,7 @@ function ProductDetails() {
             {loadingReviews ? (
               <p>Loading reviews...</p>
             ) : reviews.length === 0 ? (
-              <p>Abhi koi review nahi hai. Pehla review aap likh sakte hain!</p>
+              <p>There are no reviews yet. Be the first to write a review!</p>
             ) : (
               <div className="reviews-list">
                 {reviews.map((r) => (

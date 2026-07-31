@@ -34,7 +34,7 @@ function Messages() {
         {loading ? (
           <p>Loading messages...</p>
         ) : messages.length === 0 ? (
-          <p>Abhi koi message nahi aaya.</p>
+          <p>There is no message wait.</p>
         ) : (
           <div className="messages-list">
             {messages.map((msg) => (

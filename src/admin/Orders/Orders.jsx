@@ -50,7 +50,7 @@ function Orders() {
         {loading ? (
           <p>Loading orders...</p>
         ) : orders.length === 0 ? (
-          <p>Abhi koi order nahi aaya.</p>
+          <p>No orders wait.</p>
         ) : (
           <div className="orders-list">
             {orders.map((order) => (
