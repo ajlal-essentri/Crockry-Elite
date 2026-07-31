@@ -1,0 +1,19 @@
+.dashboard{
+    display:flex;
+    min-height:100vh;
+    background:#F8F9FA;
+}
+
+.dashboard-content{
+    flex:1;
+    padding:30px;
+}
+@media (max-width: 768px){
+    .dashboard{
+        flex-direction: column;
+    }
+
+    .dashboard-content{
+        padding: 20px;
+    }
+}

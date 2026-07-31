@@ -1,0 +1,150 @@
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-btn {
+    background: #D4AF37;
+    color: #1F2937;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product-form {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 480px;
+    margin-bottom: 30px;
+}
+
+.product-form input,
+.product-form select,
+.product-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.file-label {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.form-actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form-actions button[type="submit"] {
+    background: #1F2937;
+    color: #fff;
+}
+
+.cancel-btn {
+    background: #eee;
+    color: #333;
+}
+
+.products-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-row {
+    background: #fff;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.product-row img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.product-row-info {
+    flex: 1;
+}
+
+.product-row-info h4 {
+    margin: 0 0 4px;
+}
+
+.stock-text {
+    font-size: 12px;
+    color: #888;
+}
+
+.product-row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.product-row-actions button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #eee;
+}
+
+.delete-btn {
+    background: #fdecea !important;
+    color: #e53935;
+}
+
+.file-hint {
+    font-size: 12px;
+    color: #2e7d32;
+    margin: -4px 0 0;
+}
+
+@media (max-width: 576px){
+    .products-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .add-btn{
+        width: 100%;
+    }
+
+    .product-form{
+        max-width: 100%;
+    }
+
+    .product-row{
+        flex-wrap: wrap;
+    }
+
+    .product-row-info{
+        min-width: 150px;
+    }
+}

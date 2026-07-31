@@ -1,0 +1,127 @@
+.shop-banner{
+    position:relative;
+    background:
+        linear-gradient(135deg, rgba(31,41,55,.94), rgba(31,41,55,.88)),
+        radial-gradient(circle at 20% 30%, rgba(212,175,55,.18), transparent 45%),
+        radial-gradient(circle at 85% 70%, rgba(212,175,55,.14), transparent 45%);
+    color:#fff;
+    padding:110px 0 90px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.shop-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:38px 38px;
+    pointer-events:none;
+}
+
+.shop-banner .container{
+    position:relative;
+    z-index:1;
+}
+
+.shop-banner span.eyebrow{
+    display:inline-block;
+    color:#D4AF37;
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:18px;
+}
+
+.shop-banner h1{
+    font-size:48px;
+    font-weight:700;
+    margin-bottom:16px;
+    letter-spacing:.5px;
+}
+
+.shop-banner .gold-underline{
+    width:70px;
+    height:3px;
+    background:linear-gradient(90deg,#D4AF37,#F1D078);
+    margin:0 auto 20px;
+    border-radius:2px;
+}
+
+.shop-banner p{
+    color:#C9C9C9;
+    font-size:15px;
+}
+
+.shop-banner p a,
+.shop-banner p span.current{
+    color:#D4AF37;
+    font-weight:600;
+}
+
+.shop-content{
+    padding:80px 0;
+}
+
+.shop-content .container{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:35px;
+}
+
+.shop-sidebar{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    min-height:600px;
+}
+
+.shop-products{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    min-height:600px;
+}
+.shop-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.sort-select {
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    .shop-content .container{
+        grid-template-columns: 1fr;
+    }
+    .shop-sidebar{
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px){
+    .shop-banner{
+        padding: 50px 0;
+    }
+    .shop-banner h1{
+        font-size: 30px;
+    }
+    .shop-content{
+        padding: 40px 0;
+    }
+    .shop-sidebar,
+    .shop-products{
+        padding: 18px;
+    }
+}

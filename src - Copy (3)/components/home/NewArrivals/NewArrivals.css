@@ -1,0 +1,46 @@
+.new-arrivals{
+    padding:90px 0;
+    background:#F8F9FA;
+}
+
+.new-arrivals h2{
+    text-align:center;
+    font-size:38px;
+    color:#1F2937;
+    margin-bottom:50px;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#D4AF37;
+    color:#fff;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    z-index:2;
+}
+
+.new-arrivals .product-card{
+    cursor: pointer;
+    position:relative;
+}
+@media (max-width: 992px){
+    .new-arrivals .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .new-arrivals h2{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .new-arrivals .products-grid{
+        grid-template-columns: 1fr;
+    }
+    .new-arrivals{
+        padding: 60px 0;
+    }
+}
