@@ -37,7 +37,7 @@ function Footer() {
           <div>
             <h3>Contact</h3>
             <p>Email: info@crockeryelite.com</p>
-            <p>Phone: +92 300 1234567</p>
+            <p>Phone: +92 312 2130303</p>
           </div>
 
         </div>

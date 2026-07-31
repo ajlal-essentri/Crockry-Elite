@@ -62,7 +62,6 @@ function Contact() {
             <div className="info-card">
               <MapPin size={24}/>
               <div>
-                <h3>Address</h3>
                 <p><h3>Address</h3>
 <p>Near Shamim Mosque, Delhi Colony, Clifton, Karachi, Pakistan</p></p>
               </div>
@@ -97,7 +96,7 @@ function Contact() {
           {sent ? (
             <div className="contact-success">
               <h3>Message Sent!</h3>
-              <p>Shukriya, hum jald aap se rabta karenge.</p>
+              <p>Thank you! We'll get back to you as soon as possible.</p>
               <button onClick={() => setSent(false)}>Send Another Message</button>
             </div>
           ) : (
