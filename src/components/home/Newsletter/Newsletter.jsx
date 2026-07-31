@@ -38,7 +38,7 @@ function Newsletter() {
         </p>
 
         {status === "done" ? (
-          <p className="newsletter-success">Shukriya! Aap subscribe ho gaye.</p>
+          <p className="newsletter-success">Thank you for subscribing! You'll be the first to receive our latest updates, exclusive offers, and new arrivals.</p>
         ) : (
           <form className="newsletter-form" onSubmit={handleSubmit}>
             <input
@@ -56,7 +56,7 @@ function Newsletter() {
         )}
 
         {status === "error" && (
-          <p className="newsletter-error">Kuch ghalat ho gaya, dobara try karein.</p>
+          <p className="newsletter-error">Someting Worng! Try Again</p>
         )}
 
       </div>
