@@ -88,7 +88,7 @@ function ProductDetails() {
     const { error } = await supabase.from("reviews").delete().eq("id", reviewId);
 
     if (error) {
-      alert("Delete nahi ho saka: " + error.message);
+      alert("Delete nahi ho saka: " - error.message);
       return;
     }
 
@@ -163,6 +163,7 @@ function ProductDetails() {
           <p>{product.description}</p>
 
           <div className="quantity">
+            <p>Quantity</p>
             <button onClick={() => setQty((q) => Math.max(1, q - 1))}>-</button>
             <span>{qty}</span>
             <button onClick={() => setQty((q) => q + 1)}>+</button>
