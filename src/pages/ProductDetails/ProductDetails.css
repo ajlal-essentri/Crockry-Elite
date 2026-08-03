@@ -25,10 +25,9 @@
 }
 
 .details-content p{
-   font-weight: 600;
-    color: #DCBE5C;
-    line-height: 1.8;
-    margin-bottom: 0px;
+    color:#6B7280;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
 .details-content button{
@@ -162,6 +161,12 @@
     box-shadow:0 5px 15px rgba(0,0,0,.08);
     text-align:center;
     padding-bottom:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.related-card:hover{
+    transform:translateY(-6px);
 }
 
 .related-card img{

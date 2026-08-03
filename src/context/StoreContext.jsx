@@ -117,6 +117,13 @@ export function StoreProvider({ children }) {
         localStorage.setItem("cart", JSON.stringify(cartItems));
     }, [cartItems]);
 
+    const [toast, setToast] = useState(null);
+
+    function showToast(message) {
+        setToast(message);
+        setTimeout(() => setToast(null), 2000);
+    }
+
     const addToCart = (product, qty = 1) => {
         setCartItems((prev) => {
             const existing = prev.find((item) => item.id === product.id);
@@ -131,6 +138,7 @@ export function StoreProvider({ children }) {
 
             return [...prev, { ...product, quantity: qty }];
         });
+        showToast(`${product.name} added to cart`);
     };
 
     const removeFromCart = (id) => {
@@ -220,6 +228,7 @@ export function StoreProvider({ children }) {
         registerCustomer,
         loginCustomer,
         logoutCustomer,
+        toast,
     };
 
     return (

@@ -1,4 +1,4 @@
-import "./login.css";
+import "./Login.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../../context/StoreContext";
@@ -21,7 +21,7 @@ function Login() {
       await loginCustomer(email, password);
       navigate("/");
     } catch (err) {
-      setError("Invalid email or password...");
+      setError(err.message || "Login nahi ho saka.");
     } finally {
       setLoading(false);
     }
@@ -32,7 +32,7 @@ function Login() {
       <form className="login-box" onSubmit={handleSubmit}>
 
         <h1>Welcome Back</h1>
-        <p className="loginText">Login to your account</p>
+        <p>Login to your account</p>
 
         <input
           type="email"

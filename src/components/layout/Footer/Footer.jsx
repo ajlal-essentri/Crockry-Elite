@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -17,27 +18,26 @@ function Footer() {
           <div>
             <h3>Quick Links</h3>
             <ul>
-              <li>Home</li>
-              <li>Shop</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/shop">Shop</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
           <div>
             <h3>Categories</h3>
             <ul>
-              <li>Dinner Sets</li>
-              <li>Cups</li>
-              <li>Glassware</li>
-              <li>Bowls</li>
+              <li><Link to="/shop?category=Dinner%20Sets">Dinner Sets</Link></li>
+              <li><Link to="/shop?category=Cups%20%26%20Mugs">Cups & Mugs</Link></li>
+              <li><Link to="/shop?category=Glassware">Glassware</Link></li>
+              <li><Link to="/shop?category=Bowls">Bowls</Link></li>
             </ul>
           </div>
 
           <div>
             <h3>Contact</h3>
-            <p>Email: info@crockeryelite.com</p>
-            <p>Phone: +92 312 2130303</p>
+            <p>Clifton, Delhi Colony, Shamim Mosque</p>
           </div>
 
         </div>

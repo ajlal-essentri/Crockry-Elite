@@ -1,6 +1,72 @@
 import "./Cart.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../../context/StoreContext";
+
+function CartItemRow({ item, removeFromCart, updateQuantity }) {
+  // local text state taake typing ke beech mein (jab field khali ho)
+  // product cart se delete na ho jaye
+  const [localQty, setLocalQty] = useState(String(item.quantity));
+
+  function commitQuantity() {
+    const parsed = parseInt(localQty, 10);
+    if (!parsed || parsed < 1) {
+      setLocalQty(String(item.quantity)); // invalid ho to purani value pe wapis
+      return;
+    }
+    updateQuantity(item.id, parsed);
+  }
+
+  return (
+    <div className="cart-item">
+
+      <img src={item.image} alt={item.name} />
+
+      <div>
+        <h3>{item.name}</h3>
+        <p>Rs {item.price}</p>
+      </div>
+
+      <div className="qty-stepper">
+        <button
+          type="button"
+          onClick={() => {
+            const next = Math.max(1, item.quantity - 1);
+            setLocalQty(String(next));
+            updateQuantity(item.id, next);
+          }}
+        >
+          -
+        </button>
+
+        <input
+          type="number"
+          min="1"
+          value={localQty}
+          onChange={(e) => setLocalQty(e.target.value)}
+          onBlur={commitQuantity}
+          onKeyDown={(e) => e.key === "Enter" && commitQuantity()}
+        />
+
+        <button
+          type="button"
+          onClick={() => {
+            const next = item.quantity + 1;
+            setLocalQty(String(next));
+            updateQuantity(item.id, next);
+          }}
+        >
+          +
+        </button>
+      </div>
+
+      <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+        Remove
+      </button>
+
+    </div>
+  );
+}
 
 function Cart() {
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useStore();
@@ -23,31 +89,12 @@ function Cart() {
             ) : (
 
               cartItems.map((item) => (
-
-                <div className="cart-item" key={item.id}>
-
-                  <img src={item.image} alt={item.name} />
-
-                  <div>
-                    <h3>{item.name}</h3>
-                    <p>Rs {item.price}</p>
-                  </div>
-
-                  <input
-                    type="number"
-                    min="1"
-                    value={item.quantity}
-                    onChange={(e) =>
-                      updateQuantity(item.id, Number(e.target.value))
-                    }
-                  />
-
-                  <button onClick={() => removeFromCart(item.id)}>
-                    Remove
-                  </button>
-
-                </div>
-
+                <CartItemRow
+                  key={item.id}
+                  item={item}
+                  removeFromCart={removeFromCart}
+                  updateQuantity={updateQuantity}
+                />
               ))
 
             )}

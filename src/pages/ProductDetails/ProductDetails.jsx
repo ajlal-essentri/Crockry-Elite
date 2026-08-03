@@ -88,7 +88,7 @@ function ProductDetails() {
     const { error } = await supabase.from("reviews").delete().eq("id", reviewId);
 
     if (error) {
-      alert("Delete nahi ho saka: " - error.message);
+      alert("Delete nahi ho saka: " + error.message);
       return;
     }
 
@@ -114,7 +114,7 @@ function ProductDetails() {
       : null;
 
   return (
-    <section className="product-details">
+    <section className="product-details" key={id}>
       <div className="container details-container">
 
         <div className="details-left">
@@ -163,7 +163,6 @@ function ProductDetails() {
           <p>{product.description}</p>
 
           <div className="quantity">
-            <p>Quantity</p>
             <button onClick={() => setQty((q) => Math.max(1, q - 1))}>-</button>
             <span>{qty}</span>
             <button onClick={() => setQty((q) => q + 1)}>+</button>
@@ -193,7 +192,7 @@ function ProductDetails() {
             {loadingReviews ? (
               <p>Loading reviews...</p>
             ) : reviews.length === 0 ? (
-              <p>There are no reviews yet. Be the first to write a review!</p>
+              <p>Abhi koi review nahi hai. Pehla review aap likh sakte hain!</p>
             ) : (
               <div className="reviews-list">
                 {reviews.map((r) => (
@@ -286,7 +285,14 @@ function ProductDetails() {
               .filter((item) => item.id !== product.id)
               .slice(0, 4)
               .map((item) => (
-                <div className="related-card" key={item.id}>
+                <div
+                  className="related-card"
+                  key={item.id}
+                  onClick={() => {
+                    navigate(`/product/${item.id}`);
+                    window.scrollTo(0, 0);
+                  }}
+                >
                   <img src={item.image} alt={item.name} />
                   <h4>{item.name}</h4>
                   <p>Rs {item.price}</p>
