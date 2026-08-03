@@ -60,7 +60,7 @@ function CartItemRow({ item, removeFromCart, updateQuantity }) {
         </button>
       </div>
 
-      <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
+      <button className="remove" onClick={() => removeFromCart(item.id)}>
         Remove
       </button>
 
